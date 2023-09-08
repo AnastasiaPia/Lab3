@@ -15,4 +15,8 @@
 
 hello <- function() {
   print("Hello, world!")
+  
+  hello2<-function(){
+    print("nazli")
+  }
 }
