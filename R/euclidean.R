@@ -1,6 +1,6 @@
 # Hello, world!
 #
-# This is an example function named 'hello' 
+# This is an example function named 'hello'
 # which prints 'Hello, world!'.
 #
 # You can learn more about package authoring with RStudio at:
@@ -13,10 +13,23 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
-hello <- function() {
-  print("Hello, world!")
-  
-  hello2<-function(){
-    print("nazli")
-  }
+
+
+euclidean<-function(a,b){
+    while(b!=0){
+      k<-b
+      b<-a%%b
+      a<-k
+    }
+    return(a)
 }
+
+#examples
+#euclidean(12,20)
+#euclidean(123612,13892347912)
+#euclidean(100,1000)
+
+
+
+
+
