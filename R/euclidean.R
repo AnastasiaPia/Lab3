@@ -1,6 +1,3 @@
-name<-"Anastasia Piadi, Nazli Bilgic"
-liuid<-"anapi501,nazbi056"
-
 
 
 
