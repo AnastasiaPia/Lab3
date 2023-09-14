@@ -1,24 +1,4 @@
 
-library(test_euclidean)
-
-euclidean<-function(a,b){
-  if(!is.numeric(a)||!is.numeric(b)||!length(a)==1||!length(b)==1){
-    stop("check your input")
-  }
-    while(b!=0){
-      k<-b
-      b<-a%%b
-      a<-k
-    }
-    return(a)
-}
-
-#examples
-euclidean(12,20)
-euclidean(123612,13892347912)
-euclidean(100,1000)
-
-euclidean(-100,1000)
 context("euclidean")
 
 test_that("GDC is calculated correctly.", {
@@ -33,4 +13,3 @@ test_that("Wrong input throws an error.", {
   expect_error(euclidean(100, "1000"))
   expect_error(euclidean(TRUE, "1000"))
 })
-
