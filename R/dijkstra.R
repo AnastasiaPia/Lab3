@@ -1,40 +1,45 @@
 #'Dijkstra Algorithm for the shortest path.
 #'
-#'@param graph It must be data frame. The graph is a data frame including three variables v1,v2,w and contains the edges of the graph from v1 to v2 and the weight of the edge w.
+#'@param graph The graph must be data frame. It includes three variables v1,v2,w and contains the edges of the graph from v1 to v2 and the weight of the edge w.
 #'
-#'@param init_node It must be numeric scalar. The initial node that the algorithm will start calculating the shortest path.
+#'@param init_node Inıt_node must be numeric scalar. The initial node that the algorithm will start calculating the shortest path.
 #'
-#'@return It will be a vector with the shortest paths from the initial node.
+#'
+#'@description
+#'The function takes a data frame. v1 and v2 vertices of the graph and w weight of the nodes.
+#'all_nodes<-unique(c(graph$v1, graph$v2)) this line will extract all unique nodes from the graph data frame.
+#'The function checks if the init_node is a numerical scalar. Also checks if init_node is included in the node list.
+#'If the init_node is not a numeric scalar, it will stop with a message "The initial node should be a numeric scalar"
+#'initializing length_nodes, distance_nodes, visited_nodes variables.
+#'The length_nodes variable, stores the total number of the nodes in the graph.
+#'The distance_nodes variable, is a numeric vector initialized with infinity for each node's distance. The distance to the initial node is set to zero.
+#'The visited_nodes variable, is an empty numeric vector. Visited nodes of the graph are temporarily stored here.
+#'The function has a loop for going through nodes. This loop stops when all nodes in the graph have been visited.
+#'unvisited_nodes<- setdiff(all,nodes,visited_nodes) finding the nodes that are not visited.
+#'To find the minimum distanced node from the initial node, the code repeats and goes through all not visited nodes.
+#'The minimum distanced node is added to the 'visited_nodes' vector.
+#'For each node which has connection to the minimum distanced node, the function calculates a new distance value and if it is shorter than the current one it will update the old value.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#'@return It will be a numeric vector with the shortest paths from the initial node.
+#'
+#'@examples
+#'wiki_graph <-
+#'data.frame(v1=c(1,1,1,2,2,2,3,3,3,3,4,4,4,5,5,6,6,6),
+#'           v2=c(2,3,6,1,3,4,1,2,4,6,2,3,5,4,6,1,3,5),
+#'           w=c(7,9,14,7,10,15,9,10,11,2,15,11,6,6,9,14,2,9))
+#'dijkstra(wiki_graph, 1)
+#'
+#'@seealso
+#'(\url{https://en.wikipedia.org/wiki/Dijkstra%27s algorithm}).
+#'
 
 dijkstra <- function(graph, init_node) {
   all_nodes <- unique(c(graph$v1, graph$v2))
   if (!is.numeric(init_node) || length(init_node) != 1) {
-    stop("the initial node should be a numerical scalar")
+    stop("The initial node should be a numerical scalar")
   }
   if (!(init_node %in% all_nodes)) {
-    stop("the initial node must be included in the list")
+    stop("The initial node must be included in the list")
   }
 
   length_nodes <- length(all_nodes)
