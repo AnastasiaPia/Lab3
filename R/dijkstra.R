@@ -29,10 +29,9 @@
 #'           w=c(7,9,14,7,10,15,9,10,11,2,15,11,6,6,9,14,2,9))
 #'dijkstra(wiki_graph, 1)
 #'
-#'@seealso
-#'(\url{https://en.wikipedia.org/wiki/Dijkstra%27s algorithm}).
+#'@seealso [Dijkstra's Algorithm Wikipedia Page] (https://en.wikipedia.org/wiki/Dijkstra%27s algorithm)
 #'
-
+#'@export
 dijkstra <- function(graph, init_node) {
   all_nodes <- unique(c(graph$v1, graph$v2))
   if (!is.numeric(init_node) || length(init_node) != 1) {

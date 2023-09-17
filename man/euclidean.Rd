@@ -36,5 +36,5 @@ euclidean(TRUE,50)
 
 }
 \seealso{
-(\url{https://en.wikipedia.org/wiki/Euclidean algorithm}).
+[Euclidean Algorithm Wikipedia Page] (https://en.wikipedia.org/wiki/Euclidean algorithm)
 }

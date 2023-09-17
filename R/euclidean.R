@@ -29,8 +29,7 @@
 #'euclidean(TRUE,50)
 #'}
 #'
-#'@seealso
-#'(\url{https://en.wikipedia.org/wiki/Euclidean algorithm}).
+#'@seealso [Euclidean Algorithm Wikipedia Page] (https://en.wikipedia.org/wiki/Euclidean algorithm)
 #'
 #'@export
 euclidean <- function(a, b) {
