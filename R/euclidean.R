@@ -5,7 +5,6 @@
 #'The function euclidean calculates the greatest common divisor of two numbers
 #'
 #'@param a,b Numeric scalar or integer. The inputs for the euclidean calculation.
-#'@param k Numeric scalar or integer. This variable is used temporarily for storing value of b during the calculation.
 #'
 #'@description
 #'The function takes two integers or numeric scalars. The algorithm has while loop for the calculation.

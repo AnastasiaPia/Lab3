@@ -8,8 +8,6 @@ euclidean(a, b)
 }
 \arguments{
 \item{a, b}{Numeric scalar or integer. The inputs for the euclidean calculation.}
-
-\item{k}{Numeric scalar or integer. This variable is used temporarily for storing value of b during the calculation.}
 }
 \value{
 If all input are numeric scalars or integers then the output will be scalar or integer. The function will return the greatest common divisor of the two input numbers.

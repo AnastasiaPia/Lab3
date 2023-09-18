@@ -4,6 +4,10 @@
 \name{Lab3}
 \alias{Lab3}
 \title{Lab3: A package for euclidean and dijkstra functions.}
+\description{
+The euclidean function calculates the greatest common divisor of two numbers, which are numeric scalars or integers, according to the homonymous algorithm.
+The dijkstra function finds the shortest path from the initial node in the graph.
+}
 \section{Euclidean function}{
 
 The euclidean function calculates the greatest common divisor of two numbers, which are numeric scalars or integers, according to the homonymous algorithm.
