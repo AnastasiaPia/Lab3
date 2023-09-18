@@ -40,6 +40,9 @@ dijkstra <- function(graph, init_node) {
   if (!(init_node %in% all_nodes)) {
     stop("The initial node must be included in the list")
   }
+  if(!((names(graph)[1]=="v1")&& (names(graph)[2]=="v2")&& (names(graph)[3]=="w"))){
+    stop("Dataset should have v1,v2 and w columns. Check it again!!!")
+  }
 
   length_nodes <- length(all_nodes)
   distance_nodes <- rep(Inf, length_nodes)
