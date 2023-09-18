@@ -16,15 +16,23 @@ It will be a numeric vector with the shortest paths from the initial node.
 }
 \description{
 The function takes a data frame. v1 and v2 vertices of the graph and w weight of the nodes.
+
 all_nodes<-unique(c(graph$v1, graph$v2)) this line will extract all unique nodes from the graph data frame.
-The function checks if the init_node is a numerical scalar. Also checks if init_node is included in the node list.
+
+The function checks if the init_node is a numerical scalar. It checks if init_node is included in the node list.
+It ,also, checks if the names of the columns of the data frame are v1, v2 and w.
+
 If the init_node is not a numeric scalar, it will stop with a message "The initial node should be a numeric scalar"
 initializing length_nodes, distance_nodes, visited_nodes variables.
+
 The length_nodes variable, stores the total number of the nodes in the graph.
 The distance_nodes variable, is a numeric vector initialized with infinity for each node's distance. The distance to the initial node is set to zero.
 The visited_nodes variable, is an empty numeric vector. Visited nodes of the graph are temporarily stored here.
+
 The function has a loop for going through nodes. This loop stops when all nodes in the graph have been visited.
+
 unvisited_nodes<- setdiff(all,nodes,visited_nodes) finding the nodes that are not visited.
+
 To find the minimum distanced node from the initial node, the code repeats and goes through all not visited nodes.
 The minimum distanced node is added to the 'visited_nodes' vector.
 For each node which has connection to the minimum distanced node, the function calculates a new distance value and if it is shorter than the current one it will update the old value.
