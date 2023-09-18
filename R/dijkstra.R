@@ -74,10 +74,10 @@ dijkstra <- function(graph, init_node) {
 
     connected_nodes <- unique(c(graph$v1[graph$v2 == min_dist], graph$v2[graph$v1 == min_dist]))
 
-    for (neighbor in connected_nodes) {
-      new_dist <- distance_nodes[min_dist] + graph$w[which(graph$v1 == min_dist & graph$v2 == neighbor)]
-      if (new_dist < distance_nodes[neighbor]) {
-        distance_nodes[neighbor] <- new_dist
+    for (closest_node in connected_nodes) {
+      new_dist <- distance_nodes[min_dist] + graph$w[which(graph$v1 == min_dist & graph$v2 == closest_node)]
+      if (new_dist < distance_nodes[closest_node]) {
+        distance_nodes[closest_node] <- new_dist
       }
     }
   }
