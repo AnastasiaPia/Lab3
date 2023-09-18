@@ -18,6 +18,6 @@ test_that("Error messages are returned for erronous input in the Dijkstra algori
   wiki_wrong_graph <- wiki_graph[1:2]
   expect_error(dijkstra(wiki_wrong_graph, 3))
   expect_error(dijkstra(wiki_graph, 7))
-  expect_error(dijkstra(as.matrix(wiki_graph), 3))
+  expect_error(dijkstra(as.matrix(wiki_graph), 3))  
 })
 
